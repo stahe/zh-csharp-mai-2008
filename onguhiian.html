@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="inan.html" class="md-nav__link">
+      <a href="ianie.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. 引言
+    1. 简介
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="nhuang-visual-c-2008.html" class="md-nav__link">
+      <a href="visual-c-2008-enhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 安装 Visual C# 2008
+    2. Visual C# 2008 的安装
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="hangonge-net-ei.html" class="md-nav__link">
+      <a href="hangong-net-ei.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. 常用的 .NET 类
+    5. 常用 .NET 类
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="uuanghan.html" class="md-nav__link">
+      <a href="webuu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. 服务网站
+    12. Web服务
   
 
     
@@ -785,168 +787,162 @@
   
 
 
-<p><a id="refheading10399091168783983-copie-1"></a>
-<a id="refheading10399111168783983-copie-1"></a>
-<a id="refheading10399651168783983-copie-1"></a>
-<a id="refheading10400331168783983-copie-1"></a>
-<a id="refheading10400771168783983-copie-1"></a>
-<a id="refheading10401111168783983-copie-1"></a>
-<a id="refheading10401571168783983"></a></p>
+<p><span id="refheading10401571168783983" name="refheading10401571168783983" class="odt-bookmark-anchor"></span></p>
 <h1 id="8">8. <span style="color: #365f91">用户事件</span></h1>
-<p>在上一章中，我们讨论了与表单组件相关的事件概念。现在我们将探讨如何在自己的类中创建事件。</p>
-<p><a id="refheading10401591168783983"></a></p>
+<p>上一章我们讨论了与表单组件相关的事件概念。现在我们将了解如何在自己的类中创建事件。</p>
+<p><span id="refheading10401591168783983" name="refheading10401591168783983" class="odt-bookmark-anchor"></span></p>
 <h2 id="81">8.1. <span style="color: #4f81bd">预定义的委托对象</span></h2>
-<p>我们在上一章中已经接触过对象<em>委托</em>的概念，但当时只是略过不谈。在探讨表单组件的事件处理程序如何声明时，我们曾遇到过类似以下的代码：</p>
+<p>上一章曾提及 <em>delegate</em> 对象的概念，但当时仅进行了简要介绍。在探讨表单组件事件处理程序的声明方式时，我们曾遇到过类似以下代码：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(<span style="color:#0000ff">this</span>.buttonAfficher_Click);</span></span>
 </code></pre></div>
 
-<p>其中 <em>buttonAfficher</em> 是一个 [Button] 组件。该类定义了如下 <strong>Click</strong> 事件：</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D600000361A5C9640D.png" width="525" height="260" style="display:inline-block; margin:4px;width:13.891cm;height:6.867cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D600000361A5C9640D.png" /></td></tr></table>
+<p>其中 <em>buttonAfficher</em> 是 [Button] 类型的组件。该类有一个名为 <strong>Click</strong> 的字段，定义如下：</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000006D600000361A5C9640D.png" width="525" height="260" style="display:inline-block; margin:4px;width:13.891cm;height:6.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D600000361A5C9640D.png" /></td></tr></table>
 
 <ul>
-  <li>[1]：[Button] 类
+  <li>[1]：类 [Button]
   </li>
   <li>[2]：其事件
   </li>
-  <li>[3,4]：<i>Click</i> 事件
+  <li>[3,4]：事件 <i>Click</i>
   </li>
   <li>[5]：事件 [Control.Click] [4] 的声明。
     <ul>
-      <li><i>EventHandler </i>是名为<b>“委托</b>”的方法的原型（模型）。
+      <li><i>EventHandler</i> 是一个称为<b>委托</b>的方法原型（模板）。
       </li>
-      <li><i>event</i> 是一个关键字，用于限制<i>委托</i>的功能。<b>EventHandler</b>：作为对象的<i>委托</i>比 <i>event</i> 具有更丰富的功能。
+      <li><i>event</i> 是一个关键字，用于限制 <i>delegate</i> 的功能。<b>EventHandler</b>： <i>delegate</i> 对象的功能比 <i>event</i> 对象更丰富。
       </li>
     </ul>
   </li>
 </ul>
 
-<p>访问<em>委托</em> <strong>EventHandler</strong> 的定义如下：</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE0000013BDE4AB081.png" width="301" height="220" style="display:inline-block; margin:4px;width:7.96cm;height:5.831cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE0000013BDE4AB081.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p><em>delegate</em> <strong>EventHandler</strong> 的定义如下：</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001AE0000013BDE4AB081.png" width="301" height="220" style="display:inline-block; margin:4px;width:7.96cm;height:5.83cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE0000013BDE4AB081.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<p>Visit <em>委托的</em> <strong>EventHandler</strong> 指定了一个方法模型：</p>
+<p><em>delegate</em> <strong>EventHandler</strong> 表示一种方法模板：</p>
 <ul>
   <li>其第一个参数为 <b>Object</b> 类型
   </li>
-  <li>其第二个参数为 <b>EventArgs</b>
+  <li>第二个参数类型为 <b>EventArgs</b>
   </li>
-  <li>且不返回任何结果
+  <li>不返回任何结果
   </li>
 </ul>
 
-<p>与 <em>EventHandler</em> 定义的模型对应的方法可能如下所示：</p>
+<p>符合由 <em>EventHandler</em> 定义的模型的方法可能如下：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span></span>
 </code></pre></div>
 
-<p>要创建一个 <em>EventHandler</em>，请按以下步骤操作：</p>
+<p>要创建类型为 <em>EventHandler</em> 的对象，请按以下步骤操作：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type EventHandler);
 </code></pre></div>
-<p>因此我们可以这样写：</p>
+<p>因此可以编写如下代码：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
 </code></pre></div>
-<p>实际上，<em>委托</em>类型的变量是一组指向该<em>委托所</em>对应方法的引用列表。要将新方法 <em>M</em> 添加到上面的变量 <em>evtHandler</em> 中，我们使用以下语法：</p>
+<p>类型为 <em>delegate</em> 的变量实际上是一组对 <em>delegate</em> 模型中相应方法的引用列表。 若要在上述变量 <em>evtHandler</em> 中添加新<em>方法</em> M，请使用以下语法：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div>
 <p>即使 <em>evtHandler</em> 是一个空列表，也可以使用 += 语法。</p>
-<p>说明：</p>
+<p>语句：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(<span style="color:#0000ff">this</span>.buttonAfficher_Click);</span></span>
 </code></pre></div>
 
-<p>将一个<em>事件处理程序</em>添加到 <em>buttonAfficher</em>.<em>Click</em> 事件方法列表中。当组件 buttonAfficher 发生 <em>Click</em> 事件时，VB 将执行：</p>
+<p>将类型为 <em>EventHandler</em> 的方法添加到事件 <em>buttonAfficher.Click</em> 的方法列表中。 当组件 buttonAfficher 上的事件 <em>Click</em> 发生时，VB 执行以下语句：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>            buttonAfficher.Click(source, evt);
 </code></pre></div>
 <p>其中：</p>
 <ul>
-  <li><i>source </i>是事件背后的<i>对象</i>
+  <li><i>source </i>是类型为 <i>object</i> 的组件，该组件触发了事件
   </li>
-  <li><i>evt</i> 类型为 <i>Event</i>Args，且不包含任何信息
+  <li><i>evt</i>（类型为 <i>EventArgs</i>）的事件，且不包含任何信息
   </li>
 </ul>
 
-<p>所有与 <em>Click</em> 事件关联的 <em>void M(object, EventArgs)</em> 签名方法由：</p>
+<p>所有通过以下方式与事件 <em>Click</em> 关联的 <em>void M(object,EventArgs)</em> 签名方法：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(M);</span></span>
 </code></pre></div>
 
-<p>都将通过 VB 传递的参数 (<em>source</em>, <em>evt</em>) 被调用。</p>
-<p><a id="refheading10401611168783983"></a></p>
+<p>将使用由 VB 传递的参数 (<em>source</em>, <em>evt</em>) 被调用。</p>
+<p><span id="refheading10401611168783983" name="refheading10401611168783983" class="odt-bookmark-anchor"></span></p>
 <h2 id="82">8.2. <span style="color: #4f81bd">定义委托对象</span></h2>
-<p>说明</p>
+<p>语句</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">delegate</span> <span style="color:#0000ff">int</span> Opération(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2);</span></span>
 </code></pre></div>
 
-<p>定义了一个名为 <em>Operation</em> 的类型，它表示一个函数原型，该原型接受两个整数并返回一个整数。正是关键字 <em>delegate</em> 使 <em>Operation</em> 成为一个函数原型定义。</p>
-<p>类型为 <em>Operation</em> 的变量 <em>op</em> 将注册一组与原型 <em>Operation</em> 对应的函数：</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<p>定义了一个名为 <em>Opération</em> 的类型，该类型表示一个接受两个整数并返回一个整数的函数原型。正是关键字 <em>delegate</em> 使 <em>Opération</em> 成为函数原型的定义。</p>
+<p>一个类型为 <em>Opération</em> 的变量 <em>op</em> 将用于存储与原型 <em>Opération</em> 对应的函数列表：</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>int f1(int,int)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>int f2(int, int)
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>int f2(int,int)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>...
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>int fn(int, int)
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>int fn(int,int)
 </code></pre></div>
 </div></td></tr></table>
 
-<p>将方法 <em>fi</em> 注册到变量 <em>op</em> 中，可通过 <em>op=new Operation(fi)</em> 或简写为 <em>op=fi</em> 实现。要将方法 <em>fj</em> 添加到已注册函数列表中，我们写 <em>op+= fj</em>。要移除方法 <em>fk</em>，我们写 <em>op-=fk</em>。如果在本例中，我们写 <em>n=op(n1,n2)</em>，则 <em>op</em> 中存储的方法集合将使用参数 <em>n1</em> 和 <em>n2</em> 执行。 最终获得的结果 <em>n</em> 将是最后执行的方法所返回的值。无法获取所有方法产生的结果。因此，若将方法列表存储在委托函数中，这些函数通常会返回 <em>void</em> 类型的结果。</p>
+<p>将方法 <em>fi</em> 存储在变量 <em>op</em> 中，可通过以下方式实现：<em>op=new 操作(fi)</em> 或者更简单地写成 op=fi.若要将方法 <em>fj</em> 添加到已存储的函数列表中，应写为 <em>op+= fj</em>。若要删除已存储的方法 <em>fk</em>，应写为 <em>op-=fk</em>。 如果在本例中输入 <em>n=op(n1,n2)</em>，则变量 <em>op</em> 中记录的所有方法都将使用参数 <em>n1</em> 和 <em>n2</em> 执行。 最终获取的结果 <em>n</em> 将是最后一个执行的方法的结果。无法获取所有方法生成的结果。因此，如果将一组方法存储在委托函数中，这些方法通常会返回类型为 <em>void</em> 的结果。</p>
 <p>请看以下示例：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Class1</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// function prototype definition</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// accepts 2 integers as parameters and returns an integer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 定义函数原型</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 接受 2 个整数作为参数，并返回一个整数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">delegate</span> <span style="color:#0000ff">int</span> Opération(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// two instance methods corresponding to the prototype</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 两个与原型对应的实例方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> Ajouter(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Ajouter(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 + n2;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">}//add</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//添加</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> Soustraire(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Soustraire(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 - n2;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">}//subtract</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// a static method corresponding to the prototype</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//减法</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 一个与原型对应的静态方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">int</span> Augmenter(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Augmenter(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 + 2 * n2;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">}//increase</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//增加</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// define an operation object to store functions</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// we register the static function increase</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 定义一个操作类型的对象，用于存储函数</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 注册静态函数“增加”</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            Opération op = Augmenter;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// the delegate is executed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">int</span> n = op(4, 7);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;n=&quot;</span> + n);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// creation of a c1 object of type class1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 创建一个类型为 class1 的对象 c1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Class1</span> c1 = <span style="color:#0000ff">new</span> <span style="color:#2b91af">Class1</span>();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// we register c1&#x27;s add method in the delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 将 c1 的 add 方法注册到委托中</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op = c1.Ajouter;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// execution of delegated object</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行委托对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            n = op(2, 3);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;n=&quot;</span> + n);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// the subtract method of c1 is registered in the delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 将 c1 的减法方法注册到委托中</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op = c1.Soustraire;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            n = op(2, 3);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;n=&quot;</span> + n);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">//registration of two functions in the delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            //将两个函数注册到委托中</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op = c1.Ajouter;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op += c1.Soustraire;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// execution of delegated object</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行委托对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op(0, 0);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// remove a function from the delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 从委托中移除一个函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op -= c1.Soustraire;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// the delegate is executed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op(1, 1);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -954,41 +950,41 @@
 </code></pre></div>
 
 <ul>
-  <li>第 3 行：定义了一个名为 <i>Class1</i> 的类。
+  <li>第 3 行：定义类 <i>Class1</i>。
   </li>
-  <li>第 6 行：定义<i>委托 Operation</i>：一个方法原型，接受两个 <i>int</i> 类型的参数并返回一个 <i>int 类型</i>
+  <li>第 6 行：定义 <i>delegateOpération</i>：一个方法原型，接受两个 <i>int</i> 类型的参数，并返回 <i>int</i> 类型的结果
   </li>
-  <li>第 9-12 行：将实例方法 <i>Add</i> 添加到<i>委托 Operation </i>的签名中。
+  <li>第 9-12 行：实例方法 <i>Ajouter</i> 具有<i>委托 Opération </i>的签名。
   </li>
-  <li>第 14-17 行：将实例<i>方法 subtract</i> 添加到<i>委托 Operation </i>的签名中。
+  <li>第 14-17 行：实例方法 <i>Soustraire</i> 具有 <i>Opération 委托</i>的签名。
   </li>
-  <li>第 20-23 行：将<b>类</b>方法 <i>Ancrease</i> 添加到<i>委托 Operation </i>的签名中。
+  <li>第 20-23 行：<b>类</b>方法 <i>Augmenter </i>的签名与 <i>Opération 委托</i>的签名一致。
   </li>
-  <li>第 25 行：执行了 <i>Main</i> 方法
+  <li>第 25 行：方法 <i>Main</i> 已执行
   </li>
-  <li>第 20 行：变量 <i>op</i> 的类型为 <i>delegate Operation</i>。它将包含一组具有 <i>delegate Operation</i> 类型签名的方法<i>。</i>它被赋予了第一个方法引用，即静态方法 <i>Class1.Augmenter </i>的引用。
+  <li>第20行：<i>变量op</i>的类型<i>为Opération委托。</i>它将包含一组具有<i>Opération委托</i>签名的方法列表<i>。</i>此时为其赋值了第一个方法引用，即静态方法<i>Class1.Augmenter</i>的引用。
   </li>
-  <li>第 31 行：执行<i>委托 op</i>：<i>op</i> 引用的所有方法都将被执行。它们将使用传递给<i>委托 op </i>的参数进行执行<i>。</i>在此处，仅会执行静态方法 <i>Class1.Augmenter</i>。
+  <li>第 31 行：执行 <i>delegate op</i>：<i>op</i> 引用的所有方法都将被执行。 它们将使用传递给 <i>delegate</i> 和 <i>op. </i>的参数进行执行。在此，仅会执行静态方法 <i>Class1.Augmenter</i>。
   </li>
-  <li>第 35 行：创建 <i>Class1</i> 类的实例 <i>c1</i>。
+  <li>第 35 行：创建了类 <i>Class1</i> 的实例 <i>c1</i>。
   </li>
-  <li>第 37 行：将实例方法 <i>c1.Ajouter</i> 赋值给<i>委托 op</i>。<i>Augmenter </i>是静态方法，而 <i>Add </i>是实例方法。我们想说明这并不重要。
+  <li>第 37 行：实例方法 <i>c1.Ajouter</i> 被分配给<i>委托 op</i>。<i>Augmenter </i>是静态方法<i>，Ajouter </i>是实例方法。此处旨在说明这并不重要。
   </li>
-  <li>第 39 行：执行<i>委托 op</i>：<i>Add</i> 方法将使用传递给<i>委托 op </i>的参数进行执行。
+  <li>第 39 行： 执行 <i>delegate op</i>：方法 <i>Ajouter </i>将使用传递给 <i>delegate op </i>的参数进行执行。
   </li>
-  <li>第 42 行：对实例方法 <i>Subtract</i> 执行相同操作。
+  <li>第 42 行：对实例方法 <i>Soustraire</i> 重复上述操作。
   </li>
-  <li>第 46-47 行：<i>委托 op</i> 中的 <i>Add </i>和 <i>Subtract</i> 方法。
+  <li>第 46-47 行：将方法 <i>Ajouter </i>和 <i>Soustraire</i> 放入 <i>delegate op </i>中。
   </li>
-  <li>第 49 行：执行<i>委托 op</i>：<i>Add </i>和 <i>Subtract</i> 都将使用传递给<i>委托 op </i>的参数被执行。
+  <li>第49行：执行delegate<i>和</i>op： 方法 <i>Ajouter </i>和 <i>Soustraire </i>将使用传递给 <i>delegate op </i>的参数进行执行。
   </li>
-  <li>第 51 行：从<i>委托操作</i>中移除 <i>Subtract</i> 方法。
+  <li>第 51 行：方法 <i>Soustraire </i>从 <i>delegate op </i>中移除。
   </li>
-  <li>第 53 行：执行<i>委托操作</i>：剩余的 <i>Add </i>方法将被执行。
+  <li>第 53 行：执行 <i>delegate op</i>：剩余的方法 <i>Ajouter </i>将被执行。
   </li>
 </ul>
 
-<p>结果如下：</p>
+<p>执行结果如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
@@ -1007,89 +1003,89 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>Soustraire(0,0)
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>Ajouter(1,1)
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading10401631168783983"></a></p>
+<p><span id="refheading10401631168783983" name="refheading10401631168783983" class="odt-bookmark-anchor"></span></p>
 <h2 id="83">8.3. <span style="color: #4f81bd">委托还是接口？</span></h2>
-<p><em>委托</em>和接口的概念看似相当相似，我们可能会好奇这两者究竟有何区别。让我们来看一个与我们之前研究过的例子相似的示例：</p>
+<p>delegates与接口的概念看似相当接近，人们可能会质疑这两者之间究竟有何区别。让我们以一个与先前研究过的示例相似的例子来说明：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program1</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// function prototype definition</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// accepts 2 integers as parameters and returns an integer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 定义函数原型</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 接受 2 个整数作为参数并返回一个整数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">delegate</span> <span style="color:#0000ff">int</span> <span style="color:#2b91af">Opération</span>(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// two instance methods corresponding to the prototype</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 两个与原型对应的实例方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">int</span> Ajouter(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Ajouter(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 + n2;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">}//add</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//添加</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">int</span> Soustraire(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Soustraire(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 - n2;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">}//subtract</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// Executing a delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }//减法</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 执行委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">Opération</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2){</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> op(n1, n2);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// delegate execution Add</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行“加法”委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(Ajouter, 2, 3));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// delegate execution Subtract</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行减法委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(Soustraire, 2, 3));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// executing a multicast delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行多播委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Opération</span> op = Ajouter;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op += Soustraire;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(op, 2, 3));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// remove a function from the delegate</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 从代理中移除一个函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            op -= Soustraire;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// the delegate is executed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(op, 2, 3));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>第 20 行<em>，Execute</em> 方法期望接收一个对第 6 行定义的 <em>Operation 委托类型</em>对象的引用。这会切换到 <em>Execute</em> 方法的不同实现（第 26、28、32 和 36 行）。这种多态特性也可以通过 : 来实现：</p>
+<p>第 20 行，方法 <em>Execute</em> 期望接收一个指向第 6 行定义的 <em>Opération 委托类型</em>对象的引用。这使得该方法能够调用 <em>Execute</em> 中的不同方法（第 26、28、32 和 36 行）。 这种多态特性也可以通过接口实现：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     <span style="color:#008000">// interface IOperation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // 接口 IOperation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">interface</span> <span style="color:#2b91af">IOperation</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">int</span> operation(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     <span style="color:#008000">// class Add</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // Add类</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Ajouter</span> : <span style="color:#2b91af">IOperation</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> operation(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Ajouter(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 + n2;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     <span style="color:#008000">// class Subtract</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // Subtract 类</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Soustraire</span> : <span style="color:#2b91af">IOperation</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> operation(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Soustraire(&quot;</span> + n1 + <span style="color:#a31515">&quot;,&quot;</span> + n2 + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> n1 - n2;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     <span style="color:#008000">// test class</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // 测试类</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program2</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// Executing the single method of the IOperation interface</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 执行接口的唯一方法 IOperation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">IOperation</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">return</span> op.operation(n1, n2);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// delegate execution Add</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行“加法”委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(<span style="color:#0000ff">new</span> <span style="color:#2b91af">Ajouter</span>(), 2, 3));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// delegate execution Subtract</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 执行减法委托</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(Execute(<span style="color:#0000ff">new</span> <span style="color:#2b91af">Soustraire</span>(), 2, 3));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1097,85 +1093,85 @@
 </code></pre></div>
 
 <ul>
-  <li>第 6-8 行：接口 [IOperation] 定义了一个 <i>operation</i> 方法。
+  <li>第 6-8 行：接口 [IOperation] 定义了方法 <i>operation</i>。
   </li>
-  <li>第 11-16 行和第 19-24 行：[Add] 和 [Subtract] 类实现了 [IOperation] 接口。
+  <li>第 11-16 行和第 19-24 行：类 [Ajouter] 和 [Soustraire] 实现了接口 [IOperation]。
   </li>
-  <li>第 29-31 行：方法 <i>Execute </i>的第一个参数是接口类型 <i>IOperation</i>。方法 <i>Execute </i>将依次接收 <i>Add</i> 类的实例和 <i>Subtract</i> 类的实例作为第一个参数。
+  <li>第29-31行：方法<i>Execute</i>，其第一个参数的类型为接口<i>IOperation</i>。 方法 <i>Execute </i>将依次接收 <i>Ajouter</i> 类的实例和 <i>Soustraire</i> 类的实例作为第一个参数。
   </li>
 </ul>
 
-<p>前一个示例中<em>委托</em>的多态性。同时，这两个示例也展示了这两个概念之间的差异。</p>
-<p>当接口仅包含一个方法时，<em>委托</em>和<em>接口</em>可以互换使用 </p>
+<p>这确实体现了前一个示例中 <em>delegate</em> 类型参数所具有的多态性。这两个示例同时也展示了这两个概念之间的差异。</p>
+<p>类型 <em>delegate</em> 和 <em>interface</em> 是可互换的 </p>
 <ul>
-  <li>（前提是接口仅包含一个方法）。实际上，<i>委托</i>是单个方法的封装，而接口可以定义多个方法。
+  <li>。实际上，类型 <i>delegate </i>是针对单一方法的封装，而接口本身可以定义多个方法。
   </li>
-  <li>如果未使用<i>委托</i>的多播特性。接口中并不存在多播的概念。
+  <li>如果未使用 <i>delegate</i> 的多播特性。事实上，接口中并不存在多播这一概念。
   </li>
 </ul>
 
-<p>如果满足这两个条件，那么我们可以为 <em>Execute</em> 方法选择以下两种签名之一：</p>
+<p>如果满足上述两个条件，则方法 <em>Execute</em> 可在以下两种签名中进行选择：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">IOperation</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">Opération</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2)</span></span>
 </code></pre></div>
 
-<p>第二种方法使用<em>委托</em>，因此使用起来更加灵活。在第一种签名中，方法的第一个参数必须实现 <em>IOperation</em> 接口。这要求创建一个类来定义将作为 <em>Execute</em> 方法第一个参数传递的方法。而在第二种签名中，任何具有正确签名的现有方法均可使用，无需额外构建。</p>
-<p><a id="refheading10401651168783983"></a></p>
+<p>使用 <em>delegate</em> 的第二种签名可能更灵活。因为在第一种签名中，方法的第一个参数必须实现 <em>IOperation</em> 接口。 这迫使开发者必须创建一个类，并在其中定义将作为 <em>Execute</em> 方法第一个参数传递的方法。而在第二种签名中，任何具有正确签名的现有方法均可适用。无需进行额外的构建工作。</p>
+<p><span id="refheading10401651168783983" name="refheading10401651168783983" class="odt-bookmark-anchor"></span></p>
 <h2 id="84">8.4. <span style="color: #4f81bd">事件管理</span></h2>
-<p>对象<em>委托</em>类可用于定义事件。类 <em>C1</em> 可以如下方式定义事件 <em>evt</em>：</p>
+<p><em>delegate</em> 对象可用于定义事件。<em>C1</em> 类可以如下方式定义 <em>evt</em> 事件：</p>
 <ul>
-  <li>在 C1 类内部或外部定义一个类型<i>委托</i>：
+  <li>在 C1 类内部或外部定义一个 <i>delegate</i> 类型：
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">delegate</span><span class="w"> </span><span class="n">TResult</span><span class="w"> </span><span class="nf">Evt</span><span class="p">(</span><span class="n">T1</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
 </code></pre></div>
 <ul>
-  <li>类 <i>C1</i> 定义了一个名为 <i>Evt 的委托</i>：
+  <li>类 <i>C1</i> 定义了一个类型为 <i>delegate</i> 的字段 <i>Evt</i>：
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public Evt Evt1;
 </code></pre></div>
 <ul>
-  <li>当类 <i>C1 </i>的实例 <i>c1</i> 想要报告一个事件时，它将调用其<i>委托 Evt1</i>，并向其传递<i>委托 Evt</i> 定义的参数。随后，<i>委托 Evt1 </i>中注册的所有方法都将使用这些参数被执行。可以说，这些方法已收到关于事件 <i>Evt1</i> 的通知。
+  <li>当类 <i>C1</i> 的实例 <i>c1</i> 需要触发事件时，它将调用其<i>委托 </i>Evt1，并向其传递由<i>委托 Evt</i> 定义的参数。 此时，<i>delegate</i> <i>Evt1中</i>注册的所有方法都将使用这些参数被执行。可以说，它们已收到<i>Evt1事件</i>的通知。
   </li>
-  <li>如果某个使用类 <i>C1 的</i>对象 <i>c2</i> 希望在对象 <i>c1</i> 上发生事件 <i>Evt1</i> 时收到通知，它将把其方法 <i>c2.M</i> 注册到委托对象 <i>c1.Evt1 </i>中<i>。</i>每当对象 <i>c1</i> 上发生事件 <i>Evt1</i> 时，其 <i>c2.M</i> 方法就会被执行。如果不再希望收到该事件的通知，它们也可以取消订阅。
+  <li>如果一个使用 <i>c1</i> 对象的 <i>c2</i> 对象希望收到 <i>c1</i> 对象上 <i>Evt1</i> 事件发生的通知， 它将把其方法 c2.M 之一注册到对象 <i>c1.</i> 的委托对象 c1.Evt1 中。因此，每当当事件 <i>Evt1 </i>在对象 <i>c1</i> 上发生时，其方法 c2.M 就会被执行。当它不再希望收到该事件的通知时，也可以取消注册。
   </li>
-  <li>由于委托对象 <i>c1.Evt1</i> 可以注册多个方法，不同的 <i>c2</i> 对象均可向 <i>c1.Evt1</i> 注册，从而接收 <i>c1</i> 上 <i>Evt1</i> 事件的通知。
+  <li>由于代理对象 c1.Evt1 可以注册多个方法， 不同的 <i>ci</i> 对象可以向代理 c1.Evt1 注册，以便接收关于 <i>c1</i> 上 <i>Evt1</i> 事件的通知。
   </li>
 </ul>
 
 <p>在此场景中，我们有：</p>
 <ul>
-  <li>一个触发事件的类
+  <li>一个发布事件的类
   </li>
-  <li>接收该事件通知的类。这些类被称为订阅了该事件。
+  <li>若干接收该事件通知的类。通常称其为“订阅该事件”或“订阅该事件”。
   </li>
-  <li>一个<i>委托</i>类型，用于定义将接收该事件通知的方法的签名
+  <li>一个类型 <i>delegate</i>，用于定义将收到事件通知的方法的签名
   </li>
 </ul>
 
-<p>.NET 框架定义了：</p>
+<p>.NET框架定义了：</p>
 <ul>
-  <li>事件<i>委托</i>的标准签名
+  <li>delegate事件的标准签名
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MyEventHandler</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">);</span>
 </code></pre></div>
 <ul>
-  <li><i>source</i>：报告该事件的对象
+  <li><i>source</i>：触发该事件的对象
   </li>
-  <li><i>evtInfo</i>：一个 <i>EventArgs</i> 类型或其派生类的对象，用于提供有关该事件的信息
+  <li><i>evtInfo</i>：一个 <i>EventArgs</i> 类型或其派生对象，提供有关该事件的信息
   </li>
-  <li><i>委托</i>的名称必须以 <i>EventHandler</i> 结尾
+  <li><i>delegate</i> 的名称必须以 <i>EventHandler</i> 结尾
   </li>
 </ul>
 
 <ul>
-  <li>在类中声明 <i>MyEventHandler</i> 的标准方法：
+  <li>在类中声明 <i>MyEventHandler</i> 类型事件的标准方式：
   </li>
 </ul>
 
@@ -1187,29 +1183,29 @@
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>...
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>}
 </code></pre></div></td></tr></table></div>
-<p><em>Evt1</em> 类型是<em>委托</em>。关键字 <em>event</em> 的作用是限制对其可执行的操作：</p>
+<p>字段 <em>Evt1</em> 的类型为 <em>delegate</em>。关键字 <em>event</em> 的作用是限制对其可执行的操作：</p>
 <ul>
-  <li>在 <i>C1</i> 类外部，仅允许执行 += 和 -= 操作。这可防止订阅该事件的方法被删除（例如因开发人员错误导致）。您可以直接订阅（+=）或取消订阅（-=）该事件。
+  <li>在 <i>C1</i> 类外部，仅允许执行 += 和 -= 操作。这可防止（例如因开发人员失误）误删订阅该事件的方法。用户仅能对事件进行订阅（+=）或取消订阅（-=）。
   </li>
-  <li>只有 <i>C1</i> 类型的实例才能调用 <i>Evt1(source, evtInfo)</i>，从而触发订阅了 <i>Evt1</i> 的方法的执行<i>。</i>
+  <li>只有 <i>C1</i> 类型的实例才能调用 <i>Evt1(source,evtInfo)</i>，从而触发订阅了 <i>Evt1.</i> 事件的方法的执行
   </li>
 </ul>
 
-<p>.NET 框架提供了一个满足事件<em>委托</em>签名的泛型方法：</p>
+<p>框架 .NET 提供了一个符合事件 <em>delegate</em> 签名要求的通用方法：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">TEventArgs</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EventArgs</span>
 </code></pre></div>
 <ul>
-  <li><i>委托 EventHandler </i>使用泛型类型 <i>TEventArgs</i>，该类型即其第二个参数的类型
+  <li><i>delegate EventHandler </i>使用泛型类型 TEventArgs，该类型是其第二个参数的类型
   </li>
-  <li>类型 <i>TEventArgs</i> 必须继承自 <i>EventArgs</i>（<i>where TEventArgs : EventArgs</i>）
+  <li>类型 <i>TEventArgs</i> 必须继承自类型 <i>EventsArgs</i>（<i>其中 TEventArgs 继承自 EventArgs</i>）
   </li>
 </ul>
 
-<p>采用这种泛型<em>委托</em>后，类 C 中事件 <em>X</em> 的声明应遵循以下推荐方案：</p>
+<p>对于这个通用的 <em>delegate</em> 类型，在 C 类中声明 <em>X</em> 事件时，应遵循以下建议的模式：</p>
 <ul>
-  <li>定义一个从 <i>EventArgs</i> 派生的类型 <i>XEventArgs</i> 来封装事件信息 <i>X</i>
+  <li>定义一个从 <i>EventArgs</i> 派生的 <i>XEventArgs</i> 类型，用于封装 <i>X</i> 事件的信息
   </li>
-  <li>在类 C 中定义一个 <i>EventHandler&lt;XEventArgs&gt;</i>。
+  <li>在类 C 中定义类型为 <i>EventHandler&lt;XEventArgs&gt; </i>的事件。
   </li>
   <li>在类 C 中定义一个受保护的方法 
   </li>
@@ -1217,26 +1213,26 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnXHandler</span><span class="p">(</span><span class="n">XEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div>
-<p>用于将事件 X “发布”给订阅者。</p>
-<p>请看以下示例：</p>
+<p>，用于向订阅者“发布”事件 X。</p>
+<p>考虑以下示例：</p>
 <ul>
-  <li>类 <i>Transmitter</i> 封装了一个温度值。该温度值会被持续监测。当温度超过某个阈值时，将触发一个事件。我们将该事件命名为 <i>TemperatureTropHaute</i>。关于此事件的信息将被封装在类型 <i>TemperatureTropHauteEventArgs 中。</i>
+  <li>类 <i>Emetteur</i> 封装了一个温度值。该温度值被持续监测。当温度超过某个阈值时，应触发一个事件。我们将该事件命名为 <i>TemperatureTropHaute</i>。该事件的相关信息将被封装在类型 <i>TemperatureTropHauteEventArgs</i> 中<i>。</i>
   </li>
-  <li>一个<i>名为 Underwriter 的</i>类订阅了上述事件。当接收到事件通知时，它会在控制台上显示一条消息。
+  <li>类 <i>Souscripteur</i> 订阅了上述事件。当接收到事件通知时，它会在控制台显示一条消息。
   </li>
-  <li>一个控制台程序创建了一个 Transmitter 和两个订阅者。它从键盘输入温度值并将其存储在 <i>Transmitter</i> 中。如果温度过高，<i>Transmitter</i>  将发布 <i>TemperatureTropHaute</i> 事件<i>。</i>
+  <li>一个控制台程序创建了一个发布者和两个订阅者。它通过键盘输入温度，并将温度记录到 <i>Emetteur</i> 实例中。如果温度过高，<i>Emetteur</i> 实例将发布事件 <i>TemperatureTropHaute。</i>
   </li>
 </ul>
 
-<p>为了符合推荐的事件管理方法，我们首先定义类型 <em>TemperatureTropHauteEventArgs</em> 来封装事件信息：</p>
+<p>为了遵循推荐的事件管理方法，我们首先定义类型 <em>TemperatureTropHauteEventArgs</em> 来封装事件信息：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">TemperatureTropHauteEventArgs</span>:<span style="color:#2b91af">EventArgs</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// temperature during evt</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 事件发生时的温度</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">decimal</span> Temperature { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// manufacturers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 制造商</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> TemperatureTropHauteEventArgs() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> TemperatureTropHauteEventArgs(<span style="color:#0000ff">decimal</span> temperature) {</span></span>
@@ -1247,26 +1243,26 @@
 </code></pre></div>
 
 <ul>
-  <li>第 6 行：由 <i>TemperatureTropHauteEventArgs</i> 封装的信息是触发 <i>TemperatureTropHaute</i> 事件的温度。
+  <li>第 6 行：由类 <i>TemperatureTropHauteEventArgs</i> 封装的信息是引发事件 <i>TemperatureTropHaute</i> 的温度。
   </li>
 </ul>
 
-<p><em>Transmitter</em> 类定义如下：</p>
+<p>类 <em>Emetteur</em> 如下所示：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Emetteur</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">decimal</span> SEUIL = 19;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// observed temperature</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 观测温度</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">decimal</span> temperature;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// name of source</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 数据源名称</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">string</span> Nom { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// event reported</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 事件报告</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">event</span> <span style="color:#2b91af">EventHandler</span>&lt;<span style="color:#2b91af">TemperatureTropHauteEventArgs</span>&gt; TemperatureTropHaute;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// read/write temperature</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 温度读写</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">decimal</span> Temperature {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">get</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                <span style="color:#0000ff">return</span> temperature;</span></span>
@@ -1274,15 +1270,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">set</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                temperature = <span style="color:#0000ff">value</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                <span style="color:#0000ff">if</span> (temperature &gt; SEUIL) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                     <span style="color:#008000">// subscribers are notified of the event</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    // 向订阅者报告事件</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                    OnTemperatureTropHaute(<span style="color:#0000ff">new</span> <span style="color:#2b91af">TemperatureTropHauteEventArgs</span>(temperature));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// reporting an event</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 事件报告</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">protected</span> <span style="color:#0000ff">virtual</span> <span style="color:#0000ff">void</span> OnTemperatureTropHaute(<span style="color:#2b91af">TemperatureTropHauteEventArgs</span> evt) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// issue of event TemperatureTropHaute to subscribers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 向订阅者发送事件 TemperatureTropHaute</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            TemperatureTropHaute(<span style="color:#0000ff">this</span>, evt);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1290,30 +1286,30 @@
 </code></pre></div>
 
 <ul>
-  <li>第 5 行：温度阈值，超过该阈值时将发布 <i>TemperatureTropHaute</i> 事件。
+  <li>第5行：超过该温度阈值时，将发布事件<i>TemperatureTropHaute</i>。
   </li>
-  <li>第 10 行：发送者有一个用于识别的名称
+  <li>第10行：发送者有一个用于识别的名称
   </li>
-  <li>第 12 行：<i>TemperatureTropHaute</i> 事件。
+  <li>第12行：事件 <i>TemperatureTropHaute</i>。
   </li>
-  <li>第 15-26 行：<i>get</i> 方法用于获取温度，<i>set</i> 方法用于记录温度。当待记录的温度超过第 5 行设定的阈值时，<i>set 方法</i>将发布 <i>TemperatureTropHaute</i> 事件。它通过传递一个记录了超过阈值温度的 <i>TemperatureTropHauteEventArgs</i> 对象，使用第 29 行定义的 <i>OnTemperatureTropHauteHandler</i> 发布该事件。
+  <li>第15-26行：返回温度的<i>get</i>方法，以及记录温度的<i>set</i>方法。 当待记录的温度超过第5行的阈值时，<i>set</i>方法会触发发布<i>TemperatureTropHaute</i>事件。 它通过第29行的<i>OnTemperatureTropHauteHandler方法</i>发布该事件，并向其传递一个<i>TemperatureTropHauteEventArgs</i>对象作为参数，该对象中记录了超过阈值的温度。
   </li>
-  <li>第 29-32 行：发布 <i>TemperatureTropHaute</i> 事件，将事件发送者本身作为第一个参数，并将接收到的 <i>TemperatureTropHauteEventArgs</i> 对象作为参数。
+  <li>第29-32行：发布<i>事件TemperatureTropHaute</i>，其第一个参数为发布者本身，第二个参数为作为参数接收到的<i>TemperatureTropHauteEventArgs对象</i>。
   </li>
 </ul>
 
-<p>将订阅 <em>TemperatureTropHaute</em> 事件的 <em>Underwriter</em> 类如下所示：</p>
+<p>将订阅事件 <em>TemperatureTropHaute</em> 的类 <em>Souscripteur</em> 如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Souscripteur</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// name</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 名称</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">string</span> Nom { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#008000">// event manager TemperatureTropHaute</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        // 事件 TemperatureTropHaute 的管理员</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">void</span> EvtTemperatureTropHaute(<span style="color:#0000ff">object</span> source, <span style="color:#2b91af">TemperatureTropHauteEventArgs</span> e) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// operator console display</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 操作员控制台显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Souscripteur [{0}] : la source [{1}] a signalé une température trop haute : [{2}]&quot;</span>, Nom, ((<span style="color:#2b91af">Emetteur</span>)source).Nom, e.Temperature);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1321,65 +1317,65 @@
 </code></pre></div>
 
 <ul>
-  <li>第 6 行：每个订阅者都通过名称进行标识。
+  <li>第 6 行：每个订阅者都通过一个名称进行标识。
   </li>
-  <li>第 9-12 行：与 <i>TemperatureTropHaute</i> 事件关联的方法。该方法的签名是 <i>EventHandler&lt;TEventArgs&gt; 类型</i>，这是事件管理器必须具备的类型。该方法会在控制台显示：显示该消息的订阅者名称、报告该事件的发送者名称，以及触发该事件的温度。
+  <li>第 9-12 行：将与事件 <i>TemperatureTropHaute</i> 关联的方法。 该方法具有 <i>delegate EventHandler&lt;TEventArgs&gt;</i> 类型的签名，这是事件处理程序必须具备的。 该方法在控制台上显示：显示该消息的订阅者名称、报告该事件的发布者名称，以及触发该事件的温度。
   </li>
-  <li><i>Transmitter</i> 对象对 <i>TemperatureTropHaute</i> 事件的订阅并非在 <i>Underwriter</i> 类中完成，而是由一个外部类来处理。
+  <li>对象 <i>Emetteur</i> 并未在类 <i>Souscripteur</i> 中订阅事件 <i>TemperatureTropHaute</i>。该订阅将由一个外部类完成。
   </li>
 </ul>
 
-<p>[Program.cs] 程序将所有这些元素整合在一起：</p>
+<p>程序 [Program.cs] 将所有这些元素相互关联：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// creation of an evts transmitter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 创建事件发送器</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Emetteur</span> e1 = <span style="color:#0000ff">new</span> <span style="color:#2b91af">Emetteur</span>() { Nom = <span style="color:#a31515">&quot;e&quot;</span> };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// creation of a table of 2 subscribers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 创建包含 2 个订阅者的数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Souscripteur</span>[] souscripteurs = <span style="color:#0000ff">new</span> <span style="color:#2b91af">Souscripteur</span>[2];</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">for</span> (<span style="color:#0000ff">int</span> i = 0; i &lt; souscripteurs.Length; i++) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                 <span style="color:#008000">// creation subscriber</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                // 创建订阅者</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                souscripteurs[i] = <span style="color:#0000ff">new</span> <span style="color:#2b91af">Souscripteur</span>() { Nom = <span style="color:#a31515">&quot;s&quot;</span> + i };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                 <span style="color:#008000">// we subscribe him to e1&#x27;s TemperatureTropHaute event</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                // 将其订阅来自 e1 的事件 TemperatureTropHaute</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                e1.TemperatureTropHaute += souscripteurs[i].EvtTemperatureTropHaute;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// temperatures are read from the keyboard</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 通过键盘读取温度</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">decimal</span> temperature;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.Write(<span style="color:#a31515">&quot;Température (rien pour arrêter) : &quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">string</span> saisie = <span style="color:#2b91af">Console</span>.ReadLine().Trim();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// as long as the line entered is not empty</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            // 只要输入的行不为空</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">while</span> (saisie != <span style="color:#a31515">&quot;&quot;</span>) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                 <span style="color:#008000">// is the input a decimal number?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                // 输入内容是否为十进制数？</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                <span style="color:#0000ff">if</span> (<span style="color:#0000ff">decimal</span>.TryParse(saisie, <span style="color:#0000ff">out</span> temperature)) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                     <span style="color:#008000">// correct temperature - recorded</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    // 温度正确 - 将其记录</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                    e1.Temperature = temperature;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                } <span style="color:#0000ff">else</span> {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="color:#008000">// on signale l&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    // 报告错误</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                    <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;Température incorrecte&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                 <span style="color:#008000">// new entry</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                // 重新输入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                <span style="color:#2b91af">Console</span>.Write(<span style="color:#a31515">&quot;Température (rien pour arrêter) : &quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                saisie = <span style="color:#2b91af">Console</span>.ReadLine().Trim();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">}//while</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            }//while</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 6 行：创建发送器
+  <li>第 6 行：创建发布者
   </li>
-  <li>第8-14行：创建两个订阅器，用于订阅发布器的 <i>TemperatureTropHaute</i> 事件。
+  <li>第 8-14 行：创建两个订阅者，并将其订阅发布者 <i>TemperatureTropHaute</i> 的事件。
   </li>
-  <li>第20-32行：键盘温度输入循环
+  <li>第 20-32 行：通过键盘输入温度的循环
   </li>
-  <li>第 24 行：如果输入的温度正确，则将其传输至 <i>Transmitter </i>e1 对象；若温度高于 19°C，该对象将触发 <i>TemperatureTropHaute</i> 事件。
+  <li>第 24 行：如果输入的温度正确，则将其传输至对象 <i>Emetteur </i>e1；若温度高于 19 °C，该对象将触发事件 <i>TemperatureTropHaute</i>。
   </li>
 </ul>
 
-<p>结果如下：</p>
+<p>执行结果如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
