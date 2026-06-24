@@ -1946,39 +1946,24 @@
 <h3 id="1118">11.1.8. <span style="color: #4f81bd">应用层</span></h3>
 <p>在 UDP 和 TCP 协议之上，存在多种标准协议：</p>
 <p><strong><mark style="background-color: #fff5ce">TELNET</mark></strong></p>
-<div class="highlight"><pre><span></span><code>该协议允许网络中机器 A 的用户连接到机器 B（通常称为主机）。TELNET 在机器 A 上模拟一个所谓的通用终端。 因此，用户操作起来就如同拥有了一台连接到机器 B 的终端。Telnet 基于 TCP 协议。
-</code></pre></div>
+<p>该协议允许网络中机器 A 的用户连接到机器 B（通常称为主机）。TELNET 在机器 A 上模拟一个所谓的通用终端。 因此，用户操作起来就如同拥有了一台连接到机器 B 的终端。Telnet 基于 TCP 协议。</p>
 <p><mark style="background-color: #fff5ce">FTP</mark><strong>：（文件传输协议）</strong></p>
-<div class="highlight"><pre><span></span><code>该协议支持两台远程机器之间的文件交换，以及文件操作（例如创建目录）。它基于 TCP 协议。
-</code></pre></div>
+<p>该协议支持两台远程机器之间的文件交换，以及文件操作（例如创建目录）。它基于 TCP 协议。</p>
 <p><mark style="background-color: #fff5ce">TFTP</mark><strong>：（简易文件传输控制）</strong></p>
-<div class="highlight"><pre><span></span><code>该协议是 FTP 的变体。它基于 UDP 协议，且比 FTP 更为简单。
-</code></pre></div>
+<p>该协议是 FTP 的变体。它基于 UDP 协议，且比 FTP 更为简单。</p>
 <p><mark style="background-color: #fff5ce">DNS</mark><strong>：（域名系统）</strong></p>
-<div class="highlight"><pre><span></span><code>当用户希望与远程机器交换文件时（例如通过 FTP），必须知道该机器的互联网地址。 例如，要在昂热大学的Lagaffe机器上进行FTP操作，需按以下方式启动FTP：FTP 193.49.144.1
-
-这要求必须有一个将机器与 IP 地址相互映射的目录。该目录中，机器很可能使用符号名称来标识，例如：
-
-昂热大学的 DPX2/320 机器
-
-昂热大学的 Sun 机器 ISERPA
-
-显然，用一个名字来称呼一台机器，要比用它的地址IP来称呼更方便。这就引出了名称唯一性的问题：有数百万台机器相互连接。人们可能会设想由一个中央机构来分配名称。但这无疑会相当繁琐。实际上，名称的管理已被分散到**各个域名中**。 每个域名通常由一个运作非常灵活的机构管理，该机构在选择机器名称方面拥有完全的自由。例如，法国境内的机器属于**fr域名**，该域名由巴黎的Inria管理。为了进一步简化，管理权限被进一步下放：**在fr域名**内部创建了子域名。因此，昂热大学属于**univ-Angers域名**。 管理该域的服务机构在为昂热大学网络中的计算机命名方面拥有完全的自由。目前该域尚未进一步细分。但在拥有大量联网计算机的大型大学中，可能会进行细分。
-
-昂热大学的 DPX2/320 被命名为 Lagaffe，而 PC 和 486DX50 则被命名为 *liny*。 如何从外部引用这些机器？需明确它们所属的域名层级。因此，机器 Lagaffe 的完整名称为：
-
-    **Lagaffe.univ-Angers.fr**
-
-在域内部，可以使用相对名称。因此，在 **fr** 域内且位于 **univ-Angers** 域之外时，可以通过以下方式引用 Lagaffe 这台机器：
-
-    **Lagaffe.univ-Angers**
-
-最后，在 *univ-Angers* 域内，只需使用
-
-    **Lagaffe**
-
-因此，应用程序可以通过名称来引用一台机器。但归根结底，仍需获取该机器的互联网地址。这如何实现？假设从机器 A 想要与机器 B 通信。
-</code></pre></div>
+<p>当用户希望与远程机器交换文件时（例如通过 FTP），必须知道该机器的互联网地址。 例如，要在昂热大学的Lagaffe机器上进行FTP操作，需按以下方式启动FTP：FTP 193.49.144.1</p>
+<p>这要求必须有一个将机器与 IP 地址相互映射的目录。该目录中，机器很可能使用符号名称来标识，例如：</p>
+<p>昂热大学的 DPX2/320 机器</p>
+<p>昂热大学的 Sun 机器 ISERPA</p>
+<p>显然，用一个名字来称呼一台机器，要比用它的地址IP来称呼更方便。这就引出了名称唯一性的问题：有数百万台机器相互连接。人们可能会设想由一个中央机构来分配名称。但这无疑会相当繁琐。实际上，名称的管理已被分散到<strong>各个域名中</strong>。 每个域名通常由一个运作非常灵活的机构管理，该机构在选择机器名称方面拥有完全的自由。例如，法国境内的机器属于<strong>fr域名</strong>，该域名由巴黎的Inria管理。为了进一步简化，管理权限被进一步下放：<strong>在fr域名</strong>内部创建了子域名。因此，昂热大学属于<strong>univ-Angers域名</strong>。 管理该域的服务机构在为昂热大学网络中的计算机命名方面拥有完全的自由。目前该域尚未进一步细分。但在拥有大量联网计算机的大型大学中，可能会进行细分。</p>
+<p>昂热大学的 DPX2/320 被命名为 Lagaffe，而 PC 和 486DX50 则被命名为 <em>liny</em>。 如何从外部引用这些机器？需明确它们所属的域名层级。因此，机器 Lagaffe 的完整名称为：</p>
+<p><strong>Lagaffe.univ-Angers.fr</strong></p>
+<p>在域内部，可以使用相对名称。因此，在 <strong>fr</strong> 域内且位于 <strong>univ-Angers</strong> 域之外时，可以通过以下方式引用 Lagaffe 这台机器：</p>
+<p><strong>Lagaffe.univ-Angers</strong></p>
+<p>最后，在 <em>univ-Angers</em> 域内，只需使用</p>
+<p><strong>Lagaffe</strong></p>
+<p>因此，应用程序可以通过名称来引用一台机器。但归根结底，仍需获取该机器的互联网地址。这如何实现？假设从机器 A 想要与机器 B 通信。</p>
 <ul>
   <li>如果机器 B 与机器 A 属于同一个域，那么很可能在机器 A 的某个文件中就能找到其地址 IP。
   </li>
@@ -1987,14 +1972,11 @@
 </ul>
 
 <p><mark style="background-color: #fff5ce">XDR</mark><strong>：（eXternal 数据表示）</strong></p>
-<div class="highlight"><pre><span></span><code>该协议由 sun MicroSystems 创建，规定了一种与机器无关的数据标准表示形式。
-</code></pre></div>
+<p>该协议由 sun MicroSystems 创建，规定了一种与机器无关的数据标准表示形式。</p>
 <p><mark style="background-color: #fff5ce">RPC</mark><strong>：（远程过程调用）</strong></p>
-<div class="highlight"><pre><span></span><code>该协议同样由 sun 定义，是一种独立于传输层的远程应用程序通信协议。该协议非常重要：它使程序员无需了解传输层的细节，并使应用程序具有可移植性。该协议基于 XDR 协议
-</code></pre></div>
+<p>该协议同样由 sun 定义，是一种独立于传输层的远程应用程序通信协议。该协议非常重要：它使程序员无需了解传输层的细节，并使应用程序具有可移植性。该协议基于 XDR 协议</p>
 <p><mark style="background-color: #fff5ce">NFS</mark><strong>：网络文件系统</strong></p>
-<div class="highlight"><pre><span></span><code>该协议同样由Sun定义，它允许一台机器“看到”另一台机器的文件系统。它基于前面的RPC协议。
-</code></pre></div>
+<p>该协议同样由Sun定义，它允许一台机器“看到”另一台机器的文件系统。它基于前面的RPC协议。</p>
 <p><span id="refheading10403011168783983" name="refheading10403011168783983" class="odt-bookmark-anchor"></span></p>
 <h3 id="1119">11.1.9. <span style="color: #4f81bd">结论</span></h3>
 <p>在本篇导论中，我们概述了互联网协议的一些主要内容。若想深入了解这一领域，可阅读<strong>道格拉斯·科默（Douglas Comer）</strong>的优秀著作：</p>
